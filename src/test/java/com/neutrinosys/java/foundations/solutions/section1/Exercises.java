@@ -128,4 +128,5 @@ public class Exercises {
         System.out.println(f3.getFriends()[1]);
         System.out.println(f3.getFriends()[2]);
     }
+
 }
