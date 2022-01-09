@@ -1,4 +1,4 @@
-package com.neutrinosys.java.foundations.solutions.section1;
+package com.neutrinosys.java.foundations.solutions.section2_classes_objects;
 
 public class Exercise2 {
     public static void main(String[] args) {

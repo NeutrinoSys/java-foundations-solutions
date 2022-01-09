@@ -1,4 +1,4 @@
-package com.neutrinosys.java.foundations.solutions.section1.ex8.bank;
+package com.neutrinosys.java.foundations.solutions.section2_classes_objects.ex8.bank;
 
 public class Bank {
     private String name;
