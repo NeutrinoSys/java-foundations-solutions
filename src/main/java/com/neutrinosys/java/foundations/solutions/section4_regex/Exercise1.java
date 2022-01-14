@@ -9,5 +9,8 @@ public class Exercise1 {
         System.out.println("Lark".matches(regex));
 
         System.out.println("Stark".matches(regex2));
+        System.out.println("Dark".matches(regex2));
+        System.out.println("bark".matches(regex2));
+        System.out.println("Lark".matches(regex2));
     }
 }
