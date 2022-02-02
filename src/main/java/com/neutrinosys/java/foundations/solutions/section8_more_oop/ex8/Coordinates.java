@@ -8,7 +8,7 @@ public class Coordinates {
     private String chessCoords;
 
     public Coordinates(String chessCoords) {
-        this.chessCoords = chessCoords;
+        this.chessCoords = chessCoords; // a2
         char file = chessCoords.charAt(0);
         int rank = Integer.parseInt(Character.toString(chessCoords.charAt(1)));
         x = getXForFile(file);
@@ -20,7 +20,7 @@ public class Coordinates {
         this.y = y;
     }
 
-    public Coordinates getOffset(int x, int y) {
+    public Coordinates withOffset(int x, int y) {
         return new Coordinates(this.x + x, this.y + y);
     }
 
@@ -32,9 +32,9 @@ public class Coordinates {
         return String.format("%d, %d", x, y);
     }
 
-    public boolean isPermittedMove(Coordinates[] moves) {
-        for (int x=0; x < moves.length; x++) {
-            if (moves[x].equals(this)) return true;
+    public boolean isPermittedMove(Coordinates[] permittedMoves) {
+        for (Coordinates permittedMove : permittedMoves) {
+            if (permittedMove.equals(this)) return true;
         }
         return false;
     }
