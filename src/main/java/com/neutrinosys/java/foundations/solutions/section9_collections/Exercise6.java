@@ -1,9 +1,7 @@
 package com.neutrinosys.java.foundations.solutions.section9_collections;
 
 import java.time.Year;
-import java.util.Iterator;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Exercise6 {
     record Car(String make, String model, Year year) implements Comparable<Car> {
@@ -33,5 +31,9 @@ public class Exercise6 {
         for (Car car : cars) {
             System.out.println(car);
         }
+
+        // Code for exercise 8
+        Car[] carArray = cars.toArray(new Car[0]);
+        List<Car> carList = Arrays.asList(carArray);
     }
 }
