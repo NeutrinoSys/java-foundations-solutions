@@ -3,6 +3,7 @@ package com.neutrinosys.java.foundations.solutions.section10_streams_lambdas;
 import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.time.Year;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -68,5 +69,13 @@ public class Exercise7 {
                         )
                 );
         System.out.println(countByYearAndMake);
+
+
+        // Exercise 7.4
+        Map<String, Integer> countsByMake = new HashMap<>();
+        cars.stream()
+            .forEach(car -> countsByMake.merge(car.make, 1, Integer::sum));
+        System.out.println(countsByMake);
     }
+
 }
